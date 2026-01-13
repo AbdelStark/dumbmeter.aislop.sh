@@ -1,0 +1,97 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Dumb Meter — Neo‑Brutalist tokens */
+:root {
+  /* Radii */
+  --radius-0: 0px;
+  --radius-1: 6px;
+
+  /* Neutrals (r g b) */
+  --bg: 250 248 244;
+  --paper: 255 255 255;
+  --fg: 18 18 18;
+  --muted: 80 80 80;
+  --border: 18 18 18;
+
+  /* Accents */
+  --accent: 0 102 255;
+
+  /* Zones */
+  --sharp: 0 200 140;
+  --normal: 90 160 255;
+  --sus: 255 204 0;
+  --panic: 255 58 94;
+
+  /* Support */
+  --info: 0 102 255;
+  --success: 0 200 140;
+  --warning: 255 204 0;
+  --danger: 255 58 94;
+
+  /* Shadows */
+  --shadow-strong: 6px 6px 0 0 rgb(var(--border));
+  --shadow-hover: 8px 8px 0 0 rgb(var(--border));
+  --shadow-press: 3px 3px 0 0 rgb(var(--border));
+}
+
+/* Optional: make selection feel branded */
+::selection {
+  background: rgb(var(--sus));
+  color: rgb(var(--fg));
+}
+
+@layer base {
+  html, body {
+    height: 100%;
+    background: rgb(var(--bg));
+    color: rgb(var(--fg));
+    font-family: var(--font-sans);
+  }
+
+  /* Improve numeric alignment for scores */
+  .tabular-nums {
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+@layer components {
+  .dm-card {
+    @apply bg-paper text-fg border-[3px] border-border shadow-dm rounded-dm0;
+  }
+  .dm-card-hover {
+    @apply transition-transform transition-shadow duration-150;
+  }
+  .dm-card-hover:hover {
+    transform: translate(-1px, -1px);
+    box-shadow: var(--shadow-hover);
+  }
+
+  .dm-button {
+    @apply inline-flex items-center justify-center gap-2 px-4 py-2 border-[3px] border-border shadow-dm rounded-dm0 font-extrabold;
+    @apply focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-accent;
+    @apply active:shadow-dm-press active:translate-x-[1px] active:translate-y-[1px];
+    @apply disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+  .dm-button-primary { @apply bg-accent text-paper; }
+  .dm-button-secondary { @apply bg-paper text-fg; }
+  .dm-button-ghost { @apply bg-transparent; }
+
+  .dm-input {
+    @apply w-full px-3 py-2 bg-paper border-[2px] border-border rounded-dm0 shadow-dm;
+    @apply focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-accent;
+  }
+
+  .dm-chip {
+    @apply inline-flex items-center gap-2 px-3 py-1 border-[2px] border-border shadow-dm rounded-dm0 text-xs font-extrabold uppercase tracking-widest;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    scroll-behavior: auto !important;
+    transition-duration: 0.001ms !important;
+    animation-duration: 0.001ms !important;
+  }
+}
