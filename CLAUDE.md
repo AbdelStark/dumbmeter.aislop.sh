@@ -3,7 +3,7 @@ Dumb Meter is a Next.js App Router frontend MVP that showcases a daily, shareabl
 </identity>
 
 <environment>
-You are operating in the Codex CLI on the user's machine with full filesystem access and network enabled.
+You are operating in the Codex CLI / Claude Code (or any other agentic orchestration / harness tool) on the user's machine with full filesystem access and network enabled.
 Git is available; only commit or push when explicitly asked.
 </environment>
 
