@@ -36,8 +36,7 @@ The app will be available at `http://localhost:3000`.
 - `app/(site)` contains the App Router pages
 - `components/` contains UI, viz, and page-level components
 - `lib/` contains mock data and helpers
-- `globals.css`, `tailwind.config.ts`, and `tokens.json` define the design system
-- `PRD.md`, `UI_SPEC.md`, `DESIGN_SYSTEM.md`, `NEXTJS_STRUCTURE.md` document the full spec
+- `app/globals.css` and `tailwind.config.ts` define the design system
 
 ## What it takes to build this for real
 

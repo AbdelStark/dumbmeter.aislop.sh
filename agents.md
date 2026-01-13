@@ -19,7 +19,7 @@
 
 <parallelization>
 SAFE: independent components, different pages, or lib/ changes with no shared files.
-SERIALIZE: same component files, shared styles (globals.css), or mock-data edits.
+SERIALIZE: same component files, shared styles (app/globals.css), or mock-data edits.
 </parallelization>
 
 <escalation>

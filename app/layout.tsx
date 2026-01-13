@@ -1,4 +1,4 @@
-import "../globals.css";
+import "./globals.css";
 import type { Metadata } from "next";
 import type { ReactNode } from "react";
 import { IBM_Plex_Mono, Space_Grotesk } from "next/font/google";

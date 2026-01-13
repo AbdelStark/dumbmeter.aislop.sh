@@ -20,9 +20,8 @@ Git is available; only commit or push when explicitly asked.
 - app/(site)/          Site pages (home, model detail, methodology)
 - components/          UI, viz, reports, shell, and page sections
 - lib/                 Mock data, types, utilities
-- globals.css          Design tokens and brand primitives
+- app/globals.css      Design tokens and brand primitives
 - tailwind.config.ts   Tailwind token wiring
-- PRD.md, UI_SPEC.md, DESIGN_SYSTEM.md, NEXTJS_STRUCTURE.md  Specs (reference)
 </structure>
 
 <commands>
@@ -39,14 +38,13 @@ Git is available; only commit or push when explicitly asked.
 <do>
 - Use functional React components with typed props.
 - Keep server components by default; add "use client" only for state/hooks.
-- Use design primitives from globals.css (dm-card, dm-button, dm-input, dm-chip).
+- Use design primitives from app/globals.css (dm-card, dm-button, dm-input, dm-chip).
 - Keep UI text concise and memetic, but not mean-spirited.
 - Keep data mocked in lib/mock-data.ts unless asked to integrate APIs.
 - Prefer ASCII-only text when editing files.
 </do>
 <dont>
 - Don't change package.json or lockfiles unless asked.
-- Don't edit spec docs (PRD/UI_SPEC/DESIGN_SYSTEM) unless requested.
 - Don't add heavy state libraries or new frameworks without approval.
 </dont>
 </conventions>
@@ -65,7 +63,7 @@ Git is available; only commit or push when explicitly asked.
 </boundaries>
 
 <troubleshooting>
-- Styles missing: ensure globals.css is imported in app/layout.tsx.
+- Styles missing: ensure app/globals.css is imported in app/layout.tsx.
 - Hook error in server component: add "use client" at file top or move logic to a client child.
 - Tailwind classes not applied: verify tailwind.config.ts content paths include app/ and components/.
 </troubleshooting>
