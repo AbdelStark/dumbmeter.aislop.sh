@@ -27,6 +27,9 @@ export function ModelHeader({
             <p className="text-xs uppercase tracking-widest text-muted">{model.provider}</p>
             <h1 className="text-3xl font-black tracking-tight sm:text-5xl">{model.name}</h1>
             <p className="text-sm text-muted">
+              Daily drift snapshot against a 21-day baseline with auto + human signals.
+            </p>
+            <p className="text-sm text-muted">
               Last run {formatDisplayDate(lastUpdatedISO)} ({formatTimeAgo(lastUpdatedISO)})
             </p>
           </div>

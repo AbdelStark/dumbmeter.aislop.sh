@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-label="Dumb Meter preview">
+  <rect width="1200" height="630" fill="#FAF8F4" />
+  <rect x="60" y="60" width="1080" height="510" fill="#FFFFFF" stroke="#121212" stroke-width="8" />
+  <text x="120" y="190" font-family="Space Grotesk, sans-serif" font-size="64" font-weight="800" fill="#121212">
+    DUMB METER
+  </text>
+  <text x="120" y="250" font-family="Space Grotesk, sans-serif" font-size="28" font-weight="600" fill="#505050">
+    Daily LLM vibe check: drift vs baseline.
+  </text>
+  <path d="M200 430 A220 220 0 0 1 600 430" fill="none" stroke="#121212" stroke-width="14" />
+  <path d="M200 430 A220 220 0 0 1 350 260" fill="none" stroke="#00C88C" stroke-width="14" />
+  <path d="M350 260 A220 220 0 0 1 470 230" fill="none" stroke="#5AA0FF" stroke-width="14" />
+  <path d="M470 230 A220 220 0 0 1 570 245" fill="none" stroke="#FFCC00" stroke-width="14" />
+  <path d="M570 245 A220 220 0 0 1 600 430" fill="none" stroke="#FF3A5E" stroke-width="14" />
+  <line x1="400" y1="430" x2="560" y2="310" stroke="#121212" stroke-width="8" />
+  <circle cx="400" cy="430" r="12" fill="#121212" />
+  <text x="700" y="360" font-family="IBM Plex Mono, monospace" font-size="48" font-weight="700" fill="#121212">67</text>
+  <text x="700" y="402" font-family="Space Grotesk, sans-serif" font-size="18" font-weight="700" fill="#505050" letter-spacing="4">SUS</text>
+</svg>

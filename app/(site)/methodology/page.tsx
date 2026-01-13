@@ -1,10 +1,57 @@
+import type { Metadata } from "next";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 import { Chip } from "@/components/ui/Chip";
 import { DumbGauge } from "@/components/viz/DumbGauge";
+import { DEFAULT_DESCRIPTION, OG_IMAGE, SITE_NAME, SITE_URL } from "@/lib/seo";
+
+const pageTitle = "Methodology";
+const pageDescription =
+  "How the Dumb Meter score is computed, what metrics are tracked, and what the daily drift means.";
+
+export const metadata: Metadata = {
+  title: pageTitle,
+  description: pageDescription,
+  alternates: {
+    canonical: "/methodology"
+  },
+  openGraph: {
+    title: `${pageTitle} — ${SITE_NAME}`,
+    description: pageDescription,
+    url: "/methodology",
+    images: [
+      {
+        url: OG_IMAGE,
+        width: 1200,
+        height: 630,
+        alt: "Dumb Meter methodology preview"
+      }
+    ]
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: `${pageTitle} — ${SITE_NAME}`,
+    description: pageDescription,
+    images: [OG_IMAGE]
+  }
+};
 
 export default function MethodologyPage() {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: `${SITE_NAME} methodology`,
+    description: pageDescription,
+    url: `${SITE_URL}/methodology`,
+    author: {
+      "@type": "Organization",
+      name: SITE_NAME
+    },
+    about: DEFAULT_DESCRIPTION
+  };
+
   return (
     <div className="space-y-10">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <section className="dm-card space-y-6 p-6">
         <p className="text-xs uppercase tracking-widest text-muted">Methodology</p>
         <h1 className="text-3xl font-black tracking-tight sm:text-5xl">
